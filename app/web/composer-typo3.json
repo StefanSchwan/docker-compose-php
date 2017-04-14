@@ -1,0 +1,38 @@
+{
+  "name": "lingnercom/docker-typo3",
+  "authors": [
+    {
+      "name": "Stefan Schwan",
+      "email": "stefan.schwan@gmail.com"
+    }
+  ],
+  "config": {
+    "github-oauth": {
+      "github.com": "583476a5d0f4252285a02b294b09d141f62c61a8"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/helhum/typo3_console.git"
+    }
+  ],
+  "extra": {
+    "typo3/cms": {
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": "docroot"
+    },
+    "helhum/typo3-console": {
+      "install-extension-dummy": false
+    }
+  },
+  "require": {
+    "typo3/cms": "^7.6",
+    "helhum/typo3-console": "~4.1.2",
+    "typo3-ter/extension-builder": "7.6.0"
+  }
+}

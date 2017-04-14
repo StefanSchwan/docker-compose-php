@@ -1,0 +1,13 @@
+# basic settings
+FQDN=docker.local
+
+# database settings
+MYSQL_ROOT_PASSWORD=rootpass
+MYSQL_DATABASE=typo3
+MYSQL_USER=typo3
+MYSQL_PASSWORD=geheim
+
+# TYPO3 settings
+TYPO3_ADMINUSER=t3admin
+TYPO3_ADMINPASSWORD=secretT3adminPassword
+TYPO3_SITENAME=Site
