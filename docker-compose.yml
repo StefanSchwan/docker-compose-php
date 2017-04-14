@@ -27,7 +27,6 @@ services:
     command: >
       /bin/bash -c "envsubst '$$FQDN' <
       /etc/nginx/conf.d/mysite.template > /etc/nginx/conf.d/default.conf
-      && cat /etc/nginx/conf.d/default.conf
       && nginx -g 'daemon off;'"
     ports:
       - "80:80"
@@ -42,29 +41,30 @@ services:
     env_file:
       - etc/environment.yml
 
-#   mariadb:
-#     container_name: mariadb
-#     image: mariadb
-#     env_file:
-#       - etc/environment.yml
-#     volumes:
-#      - mysql_data:/var/lib/mysql
-#
-#   composer:
-#     container_name: composer
-#     restart: 'no'
-#     image: composer/composer:php7
-#     working_dir: /var/www/html
-#   #  command: install
-#     depends_on:
-#       - web
-#       - mariadb
-#     volumes_from:
-#       - web
-#   mail:
-#     image: mailhog/mailhog
-#     ports:
-#       - 8025:8025
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    env_file:
+      - etc/environment.yml
+    volumes:
+     - mysql_data:/var/lib/mysql
+
+  composer:
+    container_name: composer
+    restart: 'no'
+    image: composer/composer:php7
+    working_dir: /var/www/html
+  #  command: install
+    depends_on:
+      - web
+      - mariadb
+    volumes_from:
+      - web
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - 8025:8025
 #
 #   compass:
 #     container_name: compass
@@ -75,5 +75,5 @@ services:
 #     depends_on:
 #       - web
 #
-# volumes:
-#   mysql_data:
+volumes:
+  mysql_data:
