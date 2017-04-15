@@ -17,6 +17,7 @@ RUN apk add --update --no-cache \
           libxml2-dev \
           less \
           mysql-client \
+          openssl \
           ghostscript \
           git \
           go \
