@@ -1,7 +1,7 @@
 .idea/
 
 app/web/*
-!app/web/composer.json
 !app/web/composer-typo3.json
 !app/web/composer-wordpress.json
 !app/web/docroot/info.php
+
