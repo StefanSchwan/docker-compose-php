@@ -16,5 +16,5 @@ TYPO3_SITENAME=Site
 WP_ADMINUSER=wpadmin
 WP_ADMINPASSWORD=secretWPadminPassword
 WP_ADMINEMAIL=info@example.com
-WP_URL=wordpress.local
+WP_URL=docker.local
 WP_TITLE="AwesomeWordpressBoilerplate"
