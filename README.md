@@ -58,12 +58,11 @@ Based on the mariadb image, only the default command is altered to change the de
 
 ### composer
 
-Composer is set up as an Application container (composer/composer:php7). It's entrypoint is set to ```/usr/local/bin/composer``` so all arguments applied to ```docker-compose run composer [arguments]``` translate to composer commands. eg ```docker-compose run composer update``` will update the composer packages of app/web/composer.json
+Composer is set up as an Application container (composer/composer:php7). It's entrypoint is set to the composer command, so all arguments applied to ```docker-compose run composer [arguments]``` translate to composer commands. ```docker-compose run composer update``` will update the composer packages of app/web/composer.json
 
 ### mailhog
 
 Mailhog will intercept all mailtraffic send from PHP and present it on a webgui which is avaiable on http://localhost:8025
-
 
 ### compass
 
