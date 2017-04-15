@@ -1,5 +1,6 @@
 FROM php:7.0-fpm-alpine
 
+ENV PATH /var/www/html/vendor/bin:$PATH
 ADD ./etc/php.ini.development /usr/local/etc/php/php.ini
 ADD ./bin /opt/docker/bin/
 RUN apk add --update --no-cache \
