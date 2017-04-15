@@ -1,18 +1,18 @@
 # docker-compose-php
 
-Composer based dockerized PHP Application Containers inspired by   [webdevops/TYPO3-docker-boilerplate](https://github.com/webdevops/TYPO3-docker-boilerplate)
+Composer based dockerized PHP Application Development Containers inspired by   [webdevops/TYPO3-docker-boilerplate](https://github.com/webdevops/TYPO3-docker-boilerplate)
 
 ## Requirements
-Docker and docker-compose, tested on Mac OS X and Ubuntu 16.04.
+Docker and docker-compose optionally GNU Make, tested on Mac OS X and Ubuntu 16.04.
 
 ## tl;dr
 ```
 sudo echo "127.0.0.1 typo3.local" >> /etc/hosts
 cp app/web/composer-typo3.json app/web/composer.json
 docker-compose build
+docker-compose up
 docker-compose run composer install
 docker-compose run php-fpm bash /opt/docker/bin/setup-typo3.sh
-docker-compose up
 ```
 
 
