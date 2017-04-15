@@ -55,7 +55,6 @@ The FPM Container is based on php:7.0-fpm-alpine. The Dockerfile adds several sh
 
 Based on the mariadb image, only the default command is altered to change the default latin1 to utf8
 
-
 ### composer
 
 Composer is set up as an Application container (composer/composer:php7). It's entrypoint is set to the composer command, so all arguments applied to ```docker-compose run composer [arguments]``` translate to composer commands. ```docker-compose run composer update``` will update the composer packages of app/web/composer.json
@@ -67,3 +66,9 @@ Mailhog will intercept all mailtraffic send from PHP and present it on a webgui 
 ### compass
 
 The compass container is ruby compass as an application container. Try ```docker-compose run compass watch /var/www/html/[path to your config.rb]```
+
+## Makefile
+
+The Makefile contains some shortcuts for some of the frequently used annoyingly long ```docker-compose run CONTAINER COMMAND``` commands.
+
+Commands are pretty self-explaining, take a look into the file for reference.

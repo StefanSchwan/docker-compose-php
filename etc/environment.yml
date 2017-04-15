@@ -11,3 +11,10 @@ MYSQL_PASSWORD=geheim
 TYPO3_ADMINUSER=t3admin
 TYPO3_ADMINPASSWORD=secretT3adminPassword
 TYPO3_SITENAME=Site
+
+#Wordpress Settings
+WP_ADMINUSER=wpadmin
+WP_ADMINPASSWORD=secretWPadminPassword
+WP_ADMINEMAIL=info@example.com
+WP_URL=wordpress.local
+WP_TITLE="AwesomeWordpressBoilerplate"
