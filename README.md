@@ -1,6 +1,6 @@
 # docker-compose-php
 
-Composer based dockerized PHP Application Development Containers inspired by   [webdevops/TYPO3-docker-boilerplate](https://github.com/webdevops/TYPO3-docker-boilerplate)
+Composer based dockerized PHP application development containers inspired by   [webdevops/TYPO3-docker-boilerplate](https://github.com/webdevops/TYPO3-docker-boilerplate)
 
 ## Requirements
 Docker and docker-compose optionally GNU Make, tested on Mac OS X and Ubuntu 16.04.
@@ -58,7 +58,7 @@ Based on the mariadb image, only the default command is altered to change the de
 
 ### composer
 
-Composer is set up as an Application container (composer/composer:php7). It's entrypoint is set to ```composer`` so all arguments applied to ```docker-compose run compser [arguments]``` translate to composer commands. eg ```docker-compose run composer update``` will update the composer packages of app/web/composer.json
+Composer is set up as an Application container (composer/composer:php7). It's entrypoint is set to ```/usr/local/bin/composer``` so all arguments applied to ```docker-compose run composer [arguments]``` translate to composer commands. eg ```docker-compose run composer update``` will update the composer packages of app/web/composer.json
 
 ### mailhog
 
