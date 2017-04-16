@@ -30,7 +30,7 @@ typo3cms install:setup \
   --site-name $TYPO3_SITENAME
 
 typo3cms configuration:set MAIL/transport smtp
-typo3cms configuration:set MAIL/transport_smtp_server mail:25
+typo3cms configuration:set MAIL/transport_smtp_server mail:1025
 typo3cms extension:activate extension_builder
 
 
